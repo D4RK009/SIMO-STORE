@@ -17,9 +17,9 @@ const products = [
     image: freeFireImage,
     title: "FREE FIRE | CODM | PUBG",
     pricing: [
-      { duration: "1 Day", price: "$4" },
+      { duration: "1 Day", price: "$5" },
       { duration: "7 Days", price: "$15" },
-      { duration: "31 Days", price: "$23" }
+      { duration: "31 Days", price: "$25" }
     ]
   },
   {
@@ -35,6 +35,117 @@ const products = [
     image: eightBallImage,
     title: "8 Ball Pool",
     pricing: [
+      { duration: "1 Day", price: "$5" },
+      { duration: "7 Days", price: "$15" },
+      { duration: "31 Days", price: "$25" }
+    ]
+  },
+  {
+    image: iOSCertImage,
+    title: "Esign - iOS Certificate",
+    pricing: [
+      { duration: "1 Month Warranty", price: "$10" },
+      { duration: "3 Month Warranty", price: "$15" }
+    ]
+  }
+];
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background relative">
+      <BackgroundEffect />
+      <NavBar />
+      
+      <div className="container mx-auto px-4 py-8 relative z-10">
+        {/* Reseller Announcement */}
+        <div className="max-w-4xl mx-auto mb-8">
+          <div className="bg-gradient-to-r from-primary/20 via-purple-500/20 to-blue-500/20 backdrop-blur-md border border-primary/30 p-4 rounded-lg text-center">
+            <h3 className="text-xl font-bold text-white mb-2 tracking-wide">🚀 RESELLER OPPORTUNITY 🚀</h3>
+            <p className="text-gray-200 mb-2">Join our network and get special reseller pricing!</p>
+            <a 
+              href="https://t.me/resellersimobot" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-primary hover:bg-primary/90 text-white rounded-full font-bold transition-all hover-elevate"
+            >
+              Contact Bot: @resellersimobot
+            </a>
+          </div>
+        </div>
+
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-black mb-6 text-white tracking-wider drop-shadow-2xl" data-testid="text-main-title">
+            <span className="bg-gradient-to-r from-primary via-purple-400 to-blue-400 bg-clip-text text-transparent">
+              SIMO STORE
+            </span>
+          </h1>
+          
+          <div className="relative">
+            <p className="text-xl md:text-2xl font-bold text-white mb-3 max-w-3xl mx-auto drop-shadow-lg" data-testid="text-subtitle">
+              <span className="inline-block bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+                🎮 Best & Cheapest Game Keys 🎮
+              </span>
+            </p>
+            <p className="text-lg md:text-xl text-gray-200 mb-4 max-w-2xl mx-auto font-medium">
+              <span className="bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                Android • iOS • PC
+              </span>
+            </p>
+          </div>
+          
+          <div className="relative inline-block">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-purple-500/20 blur-xl rounded-full"></div>
+            <p className="relative text-lg md:text-xl text-white font-semibold px-6 py-3 bg-black/40 backdrop-blur-sm rounded-full border border-primary/30 shadow-2xl" data-testid="text-description">
+              ⚡ <span className="text-yellow-400">Fast iOS Signing Certificates</span> ⚡
+            </p>
+          </div>
+          
+          <div className="mt-6 flex justify-center space-x-2">
+            <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            <span className="inline-block w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-75"></span>
+            <span className="inline-block w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-150"></span>
+          </div>
+        </div>
+        
+        {/* Products Section */}
+        <section id="products" className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-2 text-white" data-testid="text-products-title">
+              Available Products
+            </h2>
+            <p className="text-gray-300">
+              Choose from our premium gaming services
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            {products.map((product, index) => (
+              <ProductCard
+                key={index}
+                image={product.image}
+                title={product.title}
+                pricing={product.pricing}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Payment Methods Section */}
+        <section id="payments" className="mb-16">
+          <PaymentMethods />
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="mb-8">
+          <ContactSection />
+        </section>
+      </div>
+      
+      <Footer />
+    </div>
+  );
+}    pricing: [
       { duration: "1 Day", price: "$5" },
       { duration: "7 Days", price: "$15" },
       { duration: "31 Days", price: "$26" }
