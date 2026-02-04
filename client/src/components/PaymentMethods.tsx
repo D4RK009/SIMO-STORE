@@ -25,13 +25,13 @@ const paymentMethods: PaymentMethod[] = [
     icon: <Smartphone className="w-5 h-5" />
   },
   {
-    name: "BANK RIB",
-    details: "835780030017581421796253",
+    name: "Moroccan BANK RIB",
+    details: "007380 001347130040052441",
     icon: <Building className="w-5 h-5" />
   },
   {
-    name: "Orange Card",
-    details: "min 200 DH",
+    name: "Western Union / Tap Tap Send / Send Wave",
+    details: "Accepted Worldwide",
     icon: <Banknote className="w-5 h-5" />
   },
   {
